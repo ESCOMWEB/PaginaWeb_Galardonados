@@ -5,7 +5,7 @@
     --primario: #FFFFFF;
     --secundario: #660033;
     --gris: #757575;
-} 
+}
 
 
 /** Globales **/
@@ -28,13 +28,13 @@ a{
     text-decoration: none;
 }
 h1{
-    font-size: 4.8rem;
+    font-size: 2.9rem;
 }
 h2{
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 h3{
-    font-size: 2.9rem;
+    font-size: 2rem;
 }
 h4{
     font-size: 1.9rem;
@@ -89,7 +89,49 @@ h4{
     
 }
 
-
+/* Boton */
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+.boton:visited{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+@media (min-width: 480px) {
+    .boton{
+        width: 100%;
+    }
+}
+.boton:hover{
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-decoration: none;
+}
+.contenedor-btn{
+    text-align: center;
+    margin-top: 4rem;
+}
 
 
 
@@ -99,7 +141,6 @@ h4{
     margin: 0 auto;
     padding-top: 1rem;
 }
-
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -125,12 +166,55 @@ h4{
     font-size: 2rem;
     font-weight: bold;
 }
-
 .navegacion-principal a:hover{
     background-color: var(--primario);
     color: var(--oscuro);
 }
 
+
+/** Convocatoria **/
+.convocatoria{
+    text-align: justify;
+    background-color: var(--blanco);
+    margin-top: 3rem;
+}
+.convocatoria h1{
+    text-align: center;
+    color: var(--secundario);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/** Instrucciones **/
+.contenedor-img{
+    background-image: url(/img/fondo\ mid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 470px;
+    position: relative;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    
+}
+.contenedor-img h2{
+    text-align: center;
+}
+.instrucciones{
+    background-image: url(/img/fondo\ mid.jpg);
+}
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 7rem;
+    }
+}
+.iconos{
+    text-align: center;
+}
+.iconos p{
+    text-align: justify;
+}
 
 /* Footer */
 .footer{
@@ -139,6 +223,11 @@ h4{
     padding: 3rem;
     line-height: 4rem;
     font-size: medium;
+}
+@media (max-width: 767px) {
+    .footer {
+        margin-top: 45rem;
+    }
 }
 .footer h4{
     text-align: center;
