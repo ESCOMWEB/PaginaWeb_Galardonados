@@ -1,5 +1,5 @@
 /** Selectores **/
-:root{
+:root {
     --blanco: #FFFFFF;
     --oscuro: #333333;
     --primario: #FFFFFF;
@@ -9,43 +9,56 @@
 
 
 /** Globales **/
-html{
+html {
     box-sizing: border-box;
-    font-size: 62.5%; /* 1 rem = 10px */
+    font-size: 62.5%;
+    /* 1 rem = 10px */
 }
-*, *:before, *:after{
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-body{
+
+body {
     /* body */
 }
-.contenedor2{
+
+.contenedor2 {
     max-width: 110rem;
     width: 90%;
     margin: 0 auto;
 }
-a{
+
+a {
     text-decoration: none;
 }
-h1{
+
+h1 {
     font-size: 2.9rem;
 }
-h2{
+
+h2 {
     font-size: 2.5rem;
     text-align: center;
 }
-h3{
+
+h3 {
     font-size: 2rem;
 }
-h4{
+
+h4 {
     font-size: 1.9rem;
 }
-.imagen{
+
+.imagen {
     max-width: 100%;
-    
+
 }
+
 @media (min-width: 1920px) {
-    .imagen{
+    .imagen {
         width: 100%;
         height: 270px;
         object-fit: cover;
@@ -54,44 +67,51 @@ h4{
 
 
 /** Utilidades **/
-.no-margin{
+.no-margin {
     margin-top: 1rem;
     margin-bottom: -1rem;
 }
+
 @media (max-width: 768px) {
-    .no-margin{
+    .no-margin {
         margin-top: 1rem;
         margin-bottom: -1rem;
     }
 }
+
 @media (max-width: 991px) {
-    .no-margin{
+    .no-margin {
         margin-top: 1rem;
         margin-bottom: -1rem;
     }
 }
+
 @media (max-width: 1200px) {
-    .no-margin{
+    .no-margin {
         margin-top: 1rem;
         margin-bottom: -1rem;
     }
 }
-.no-padding{
+
+.no-padding {
     padding: 0;
 }
-.padding-1{
+
+.padding-1 {
     padding: 1rem;
 }
-.padding-2{
+
+.padding-2 {
     padding: 2rem;
 }
-.centrar{
+
+.centrar {
     text-align: center;
-    
+
 }
 
 /* Boton */
-.boton{
+.boton {
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
@@ -105,7 +125,8 @@ h4{
     text-align: center;
     border: none;
 }
-.boton:visited{
+
+.boton:visited {
     background-color: var(--secundario);
     color: var(--blanco);
     padding: 1rem 3rem;
@@ -119,17 +140,20 @@ h4{
     text-align: center;
     border: none;
 }
+
 @media (min-width: 480px) {
-    .boton{
+    .boton {
         width: 100%;
     }
 }
-.boton:hover{
+
+.boton:hover {
     background-color: var(--oscuro);
     color: var(--blanco);
     text-decoration: none;
 }
-.contenedor-btn{
+
+.contenedor-btn {
     text-align: center;
     margin-top: 4rem;
 }
@@ -137,28 +161,30 @@ h4{
 
 
 /** Barra Navegacion **/
-.contenedor{
+.contenedor {
     max-width: 100rem;
     margin: 0 auto;
     padding-top: 1rem;
 }
-.nav-bg{
+
+.nav-bg {
     background-color: var(--secundario);
 }
 
-.navegacion-principal{
+.navegacion-principal {
     display: flex;
     flex-direction: column;
 }
+
 @media (min-width: 768px) {
-    .navegacion-principal{
+    .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
 
     }
 }
 
-.navegacion-principal a{
+.navegacion-principal a {
     display: block;
     text-align: center;
     padding: 1.5rem;
@@ -167,19 +193,21 @@ h4{
     font-size: 2rem;
     font-weight: bold;
 }
-.navegacion-principal a:hover{
+
+.navegacion-principal a:hover {
     background-color: var(--primario);
     color: var(--oscuro);
 }
 
 
 /** Convocatoria **/
-.convocatoria{
+.convocatoria {
     text-align: justify;
     background-color: var(--blanco);
     margin-top: 3rem;
 }
-.convocatoria h1{
+
+.convocatoria h1 {
     text-align: center;
     color: var(--secundario);
     text-transform: uppercase;
@@ -187,7 +215,7 @@ h4{
 }
 
 /** Instrucciones **/
-.contenedor-img{
+.contenedor-img {
     background-image: url(/img/fondo\ mid.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -195,14 +223,17 @@ h4{
     position: relative;
     margin-top: 4rem;
     padding-top: 4rem;
-    
+
 }
-.contenedor-img h2{
+
+.contenedor-img h2 {
     text-align: center;
 }
-.instrucciones{
+
+.instrucciones {
     background-image: url(/img/fondo\ mid.jpg);
 }
+
 @media (min-width: 768px) {
     .tres-columnas {
         display: grid;
@@ -210,34 +241,41 @@ h4{
         column-gap: 7rem;
     }
 }
-.iconos{
+
+.iconos {
     text-align: center;
 }
-.iconos p{
+
+.iconos p {
     text-align: justify;
 }
 
 /* Footer */
-.footer{
+.footer {
     background-color: var(--oscuro);
     color: var(--blanco);
     padding: 3rem;
     line-height: 4rem;
     font-size: medium;
 }
+
 @media (max-width: 767px) {
     .footer {
         margin-top: 45rem;
     }
 }
-.footer h4{
+
+.footer h4 {
     text-align: center;
 }
 
 
-.i-s{
+.i-s {
     border: 2px solid var(--secundario);
     border-radius: 27px;
     margin-top: 8rem;
     margin-bottom: 10rem;
+    box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 23px 0px rgba(0,0,0,0.75);
 }
