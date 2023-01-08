@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["usuarioID"])){
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,7 +41,7 @@
         <!-- Navegador -->
         <div class="nav-bg">
             <nav class="navegacion-principal contenedor">
-                <a href="index.html">Inicio</a>
+                <a href="index.php">Inicio</a>
                 <a href="html/inicio_sesion.html">Iniciar Sesión</a>
                 <a href="html/registro.html">Registrarse</a>
                 <a download href="/pdf/convocatoria.pdf">Convocatoria  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
@@ -171,3 +177,10 @@
 </body>
 
 </html>
+
+<?php
+}
+else if($_SESSION["tipoUsuario"]==3){
+    header("location:/php/principalAdmin.php");
+}
+?>

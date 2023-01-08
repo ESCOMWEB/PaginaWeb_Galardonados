@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+if(isset($_SESSION["usuarioID"])){
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -36,8 +41,8 @@
         <!-- Navegador -->
         <div class="nav-bg">
             <nav class="navegacion-principal contenedor">
-                <a href="/index.html">Inicio</a>
-                <a href="/php/cerrarSesion.php">Cerrar sesión</a>
+                <a href="/index.php">Inicio</a>
+                <a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a>
             </nav>
         </div>
 
@@ -45,7 +50,7 @@
             <div class="contenedorBus">
                 <div class="container padding-2">
                     <h4>
-                        Unidad a buscar
+                        <?php echo $_SESSION["tipoUsuario"];?>
                     </h4>
                     <select class="form-control">
                         <option>cecyt 1</option>
@@ -124,3 +129,9 @@
 </body>
 
 </html>
+<?php
+}
+else{
+    header("location:./../");
+}
+?>

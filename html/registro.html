@@ -20,7 +20,6 @@
     <!-- JS para validar los datos -->
     <script src="/js/jquery-3.6.1.min.js"></script>
     <script src="/js/plugins/justValidate.js"></script>
-
     <script src="/js/registro.js"></script>
 
 </head>
@@ -41,7 +40,7 @@
         <!-- Navegador -->
         <div class="nav-bg">
             <nav class="navegacion-principal contenedor">
-                <a href="/index.html">Inicio</a>
+                <a href="/index.php">Inicio</a>
                 <a href="inicio_sesion.html">Iniciar Sesión</a>
                 <a href="registro.html">Registrarse</a>
                 <a download href="/pdf/convocatoria.pdf">Convocatoria  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
@@ -52,19 +51,20 @@
         <section>
             <div class="container padding-2 i-s">
                 <h2>REGISTRO</h2>
-                <form id="formRegistro" autocomplete="off">
-                    <div class="form-group">
-                        <label class="control-label" for="clave">CLAVE:</label>
-                        <input class="form-control" id="clave" name="clave" placeholder="Ingresa tu CLAVE para verificación" type="text">
+                <form id="formRegistro" role ="form" autocomplete="off">
+                    <div class="interior">
+                        <div class="form-group ctxt">
+                            <label class="control-label" for="clave">CLAVE:</label>
+                            <input class="form-control" id="clave" name="clave" placeholder="Ingresa tu CLAVE para verificación" type="text">
+                        </div>
+                        <div class="form-group">
+                        <label class="ccontrol-label" for="email">Correo electrónico:</label>
+                        <input class="form-control" id="email" name="email" placeholder="Ingresa un Correo electrónico para el envio de cuenta y contraseña" type="text">
+                        </div>
+                        
+                        <div class="Mensaje"></div>
+                        <button class="btn btn-primary pull-right" type="submit">Enviar</button>
                     </div>
-                    <br>
-                    <div class="form-group">
-                      <label class="control-label" for="email">Correo electrónico:</label>
-                      <input class="form-control" id="email" name="email" placeholder="Ingresa un Correo electrónico para el envio de cuenta y contraseña" type="text">
-                    </div>
-                    <br>                 
-                    <br>                 
-                    <button class="btn btn-primary pull-right" type="submit">Enviar</button>
                   </form>
             </div>
         </section>

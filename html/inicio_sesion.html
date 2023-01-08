@@ -17,6 +17,11 @@
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/barraNav.js"></script>
 
+    <!-- JS para validar los datos -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/plugins/justValidate.js"></script>
+    <script src="/js/inicioSesion.js"></script>
+
 </head>
 
 <!-- Contenido -->
@@ -35,7 +40,7 @@
         <!-- Navegador -->
         <div class="nav-bg">
             <nav class="navegacion-principal contenedor">
-                <a href="/index.html">Inicio</a>
+                <a href="/index.php">Inicio</a>
                 <a href="inicio_sesion.html">Iniciar Sesión</a>
                 <a href="registro.html">Registrarse</a>
                 <a download href="/pdf/convocatoria.pdf">Convocatoria  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
@@ -44,32 +49,23 @@
 
         <!-- **Section** -->
         <section>
-            <
+            
             <div class="container padding-2 i-s">
                 <h2>INICIAR SESIÓN</h2>
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label" for="email-03">Usuario</label>
+                <form class="form-horizontal" id="inicioSesion" role="form">
+                    <div class="form-group ctxt">
+                        <label class="col-sm-3 control-label" for="usuario">Usuario:</label>
                         <div class="col-sm-9">
-                            <input class="form-control" id="email-03" placeholder="Usuario" type="text">
+                            <input class="form-control" id="usuario" name="usuario" placeholder="Usuario" type="text">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label" for="password-03">Contraseña:</label>
+                    <div class="form-group ctxt">
+                        <label class="col-sm-3 control-label" for="contraseña">Contraseña:</label>
                         <div class="col-sm-9">
-                            <input class="form-control" id="password-03" placeholder="Contraseña" type="password">
+                        <input class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña" type="password">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">
-                                    Recordarme
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="Mensaje"></div>
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-9">
                             <button class="btn btn-primary pull-right" type="submit">Enviar</button>
@@ -98,7 +94,7 @@
                         dirección electrónica; su uso para otros fines, requiere autorización previa y por escrito de la
                         Dirección General del Instituto.
                     </p>
-                    <img src="img/educacion2.png">
+                    <img src="/img/educacion2.png">
                 </div>
             </div>
         </footer>
