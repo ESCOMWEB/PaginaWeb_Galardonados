@@ -35,6 +35,7 @@ if (mysqli_num_rows($sqlRes)==1) {
       $asunto = "Felicitaciones! Galardon IPN";
       $mensaje = "Su usuario es:".$sqlInf2[0]." y su contraseña es:".$sqlInf2[1];
       include("./envioCorreo.php");
+      $resp["cod"] = 1;
     }
   }
 }
