@@ -169,7 +169,7 @@ if(!isset($_SESSION["usuarioID"])){
                         dirección electrónica; su uso para otros fines, requiere autorización previa y por escrito de la
                         Dirección General del Instituto.
                     </p>
-                    <img src="/img/educacion2.png">
+                    <img src="/img/educacion2.png" class="imagen">
                 </div>
             </div>
         </footer>
