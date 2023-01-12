@@ -40,9 +40,14 @@ if(isset($_SESSION["usuarioID"])){
 
         <!-- Navegador -->
         <div class="nav-bg">
-            <nav class="navegacion-principal contenedor">
-                <a href="/index.php">Inicio</a>
-                <a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a>
+            <nav class="navegacion-principal contenedor jmenu">
+                <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+                <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+                <ul class="jm-collapse">
+                    <li><a href="./../../index.php">Inicio</a></li>
+                    <li><a href="./../../index.php">Regristro</a></li>
+                    <li><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
+                </ul>
             </nav>
         </div>
 

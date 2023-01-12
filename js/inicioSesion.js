@@ -26,7 +26,7 @@ $(document).ready(()=>{
                         div.innerHTML="<div class='alert alert-danger'>Usuario y/o contraseña incorrectos</div>";
                     }
                     else if(resp.cod==1){
-                        window.location.href="./../php/principalAdmin.php";
+                        window.location.href="./../php/administrador/principalAdmin.php";
                     }
                 }
             });

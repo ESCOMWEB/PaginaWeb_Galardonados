@@ -181,6 +181,6 @@ if(!isset($_SESSION["usuarioID"])){
 <?php
 }
 else if($_SESSION["tipoUsuario"]==3){
-    header("location:/php/principalAdmin.php");
+    header("location:/php/administrador/principalAdmin.php");
 }
 ?>
