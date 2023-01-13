@@ -28,6 +28,10 @@ $(document).ready(()=>{
                     else if(resp.cod==1){
                         window.location.href="./../php/administrador/principalAdmin.php";
                     }
+                    else if(resp.cod==2){
+                        window.location.href="./../php/director/principalDirector.php";
+                    }
+                    
                 }
             });
         });
