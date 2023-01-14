@@ -1,6 +1,31 @@
 <?php
 
-include("consultasDirector.php");
+session_start();
+    $idDirector = $_SESSION["usuarioID"];
+    
+    include("../sinPagina/configDB.php");
+
+    // Consulta Nombre Director
+    $sql = "SELECT * FROM director WHERE idDirector = $idDirector";
+    $res = mysqli_query($conexion, $sql);
+    $nombre = mysqli_fetch_array($res);
+    
+    // Consulta Unidad Academica Director
+    $sql = "SELECT nombre FROM unidad WHERE idDirector = $idDirector";
+    $res = mysqli_query($conexion, $sql);
+    $unidad = mysqli_fetch_array($res);
+
+    // ** Tabla ** //
+    
+    // Consulta Alumnos (TODOS)
+    $sql = "SELECT idUnidad FROM unidad WHERE idDirector = $idDirector";
+    $res = mysqli_query($conexion, $sql);
+    $idUnidad = mysqli_fetch_array($res);
+
+    $sql = "SELECT * FROM galardonado WHERE idUnidad = '$idUnidad[0]' ORDER BY Nombre ASC";
+    $res2 = mysqli_query($conexion, $sql);
+
+
 if(isset($_SESSION["usuarioID"])){
 ?>
 
@@ -59,14 +84,15 @@ if(isset($_SESSION["usuarioID"])){
                       <table class="table table-striped">
                         <tr>
                             <td><b>N°</b></td>
+                            <td><b>Clave</b></td>
                             <td><b>Nombre</b></td>
                             <td><b>Galardón</b></td>
                             <td><b>Asistencia</b></td>
                             <td><b>Acompañante</b></td>
+                            <td><b>Validar</b></td>
                           </tr>
                           
                           <?php 
-                            include("../sinPagina/configDB.php");
                             $numero = 0;
                             
                             while($galardon = mysqli_fetch_array($res2)){
@@ -96,12 +122,37 @@ if(isset($_SESSION["usuarioID"])){
                                 $premio = mysqli_fetch_array($res);
                             ?>
 
-                            <tr>
+                            <tr id = "fila">
                                 <td><?php echo $numero ?></td>
+                                <td><?php echo $galardon['idGalardonado'] ?></td>
                                 <td><?php echo $galardon['Nombre'] , " " , $galardon['ApellidoP'] , " " , $galardon['ApellidoS']?></td>
                                 <td><?php echo $premio['galardon'] ?></td>
                                 <td><?php echo $asistencia?></td>
                                 <td><?php echo $compa?></td>
+                                <td>
+                                    <?php 
+                                        if($asistencia == "SI"){?>
+                                            <a href="noValidar.php?id=<?php echo $galardon['idGalardonado']; ?>">
+                                                <span class="a-color2 glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            </a>
+                                        <?php } 
+                                        else if($asistencia == "NO"){ ?>
+                                            <a href="validar.php?id=<?php echo $galardon['idGalardonado']; ?>">
+                                                <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            </a>
+                                        <?php } 
+                                        else { ?>
+                                            <a href="validar.php?id=<?php echo $galardon['idGalardonado']; ?>">
+                                                <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            </a>
+
+                                            <a href="noValidar.php?id=<?php echo $galardon['idGalardonado']; ?>">
+                                                <span class="a-color2 glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            </a>
+                                        <?php } ?>
+
+                                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>    
+                                </td>          
                             </tr>
                         <?php 
                         }

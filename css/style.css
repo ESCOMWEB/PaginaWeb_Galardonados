@@ -17,7 +17,7 @@ html {
 
 @media (max-width: 426px) {
     html {
-        background-color: aqua;
+        background-color: var(--blanco);
     }
     
     .table-striped{
@@ -143,7 +143,13 @@ h4 {
 
 .centrar {
     text-align: center;
+}
 
+a .a-color1{
+    color: green;
+}
+a .a-color2{
+    color: red;
 }
 
 /* Boton */
