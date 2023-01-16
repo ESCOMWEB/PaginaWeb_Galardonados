@@ -22,9 +22,6 @@ session_start();
     $res = mysqli_query($conexion, $sql);
     $idUnidad = mysqli_fetch_array($res);
 
-    $sql = "SELECT * FROM galardonado WHERE idUnidad = '$idUnidad[0]' ORDER BY Nombre ASC";
-    $res2 = mysqli_query($conexion, $sql);
-
 
 if(isset($_SESSION["usuarioID"])){
 ?>
@@ -94,7 +91,8 @@ if(isset($_SESSION["usuarioID"])){
                           
                           <?php 
                             $numero = 0;
-                            
+                            $sql = "SELECT * FROM galardonado WHERE idUnidad = '$idUnidad[0]' ORDER BY Nombre ASC";
+                            $res2 = mysqli_query($conexion, $sql);
                             while($galardon = mysqli_fetch_array($res2)){
                                 $numero++;
 

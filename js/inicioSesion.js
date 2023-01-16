@@ -32,7 +32,7 @@ $(document).ready(()=>{
                         window.location.href="./../php/director/principalDirector.php";
                     }
                     else if(resp.cod==3){
-                        window.location.href="./../php/galardonado/principalGal.php"
+                        window.location.href="./../php/galardonados/principalGal.php";
                     }
                     
                 }

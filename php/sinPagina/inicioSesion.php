@@ -15,9 +15,14 @@ $sqlRes = mysqli_query($conexion, $sqlCon);
 $sqlInf = mysqli_fetch_row($sqlRes);
 
 if (mysqli_num_rows($sqlRes) != 0) {
-    $resp["cod"] = 3;
-    $_SESSION["tipoUsuario"] = 3;
-    $_SESSION["usuarioID"] = $usuario;
+    if (mysqli_num_rows($sqlRes) != 0 && $contra==$sqlInf[0]) {
+        $resp["cod"] = 3;
+        $_SESSION["tipoUsuario"] = 3;
+        $_SESSION["usuarioID"] = $usuario;
+    }
+    else {
+        $resp["cod"] = 0;
+    }
 }
 else {
     $sqlCon2 = "SELECT contraseña from cuentadirector WHERE usuario='$usuario'";

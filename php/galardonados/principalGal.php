@@ -1,4 +1,4 @@
-<?php include("cabecera.php");
+<?php 
 
 session_start();
     $idGalardonado = $_SESSION["usuarioID"];
@@ -6,10 +6,11 @@ session_start();
     include("../sinPagina/configDB.php");
 
     // Consulta Nombre del galardonado
-    $sql = "SELECT * FROM galardonado WHERE idGalardonado = $idGalardonado";
+    $sql = "SELECT * FROM galardonado WHERE idGalardonado = '$idGalardonado'";
     $res = mysqli_query($conexion, $sql);
     $nombre = mysqli_fetch_array($res);
 
+    include("cabecera.php");
 if(isset($_SESSION["usuarioID"])){
 
 ?>

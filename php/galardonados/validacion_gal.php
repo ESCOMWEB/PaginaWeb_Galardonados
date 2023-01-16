@@ -1,13 +1,14 @@
-<?php include("cabecera.php"); 
+<?php 
 
 session_start();
 include("../sinPagina/configDB.php");
 
-    $id = $_GET['id'];
+    $id = $_SESSION["usuarioID"];
     $sql = "SELECT * FROM galardonado WHERE idGalardonado = '$id'";
     $res = mysqli_query($conexion, $sql);
     $galardonado = mysqli_fetch_array($res);
 
+    include("cabecera.php"); 
 if(isset($_SESSION["usuarioID"])){
 ?>
         <!-- **Section** -->
@@ -46,6 +47,12 @@ if(isset($_SESSION["usuarioID"])){
                                 <input type="checkbox" id="compa"  value="opcion-05"> Otro
                             </label>
                         </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="email-01">Acompañante</label>
+                            <input class="form-control" id="compa" name = "compa" placeholder="Ingresa Acompañante (Dejar vacio Si no se llevara)" type="text">
+                        </div>
+
                         <h3>Verificar asistencia al evento: </h3>
                         <div>
                             <button class="btn btn-primary btn-lg active" data-target="#foo" type="submit" >Validar</button>
