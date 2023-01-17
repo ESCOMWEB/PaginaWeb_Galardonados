@@ -38,7 +38,7 @@ if(isset($_SESSION["usuarioID"])){
             </div>
         </header>
 
-        <!-- Navegador -->
+        <!-- Navegador Responsivo -->
         <div class="nav-bg">
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
