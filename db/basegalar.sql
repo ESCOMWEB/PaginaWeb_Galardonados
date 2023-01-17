@@ -54,11 +54,7 @@ CREATE TABLE `asistencia` (
   `idGalardonado` varchar(15) NOT NULL,
   `Confirmacion` varchar(45) DEFAULT NULL,
   `Acompañante` varchar(45) DEFAULT NULL,
-  `Silla` int(2) DEFAULT NULL,
-  `Baston` int(2) DEFAULT NULL,
-  `Andadera` int(2) DEFAULT NULL,
-  `Ceguera` int(2) DEFAULT NULL,
-  `Otro` varchar(45) DEFAULT NULL,
+  `Incapacidad` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idGalardonado`),
   KEY `idGalardonado_idx` (`idGalardonado`),
   CONSTRAINT `idGalardonado` FOREIGN KEY (`idGalardonado`) REFERENCES `galardonado` (`idGalardonado`) ON DELETE CASCADE ON UPDATE CASCADE

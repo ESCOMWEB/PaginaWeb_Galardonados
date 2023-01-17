@@ -86,6 +86,7 @@ if(isset($_SESSION["usuarioID"])){
                             <td><b>Galardón</b></td>
                             <td><b>Asistencia</b></td>
                             <td><b>Acompañante</b></td>
+                            <td><b>Incapacidad</b></td>
                             <td><b>Validar</b></td>
                           </tr>
                           
@@ -103,10 +104,12 @@ if(isset($_SESSION["usuarioID"])){
                                 if (is_null($consulta1)) {
                                     $asistencia = "SIN CONFIRMAR";
                                     $compa = "SIN CONFIRMAR";
+                                    $incapacidad = "SIN CONFIRMAR";
                                 }
                                 else{
                                     $asistencia = $consulta1[1];
                                     $compa = $consulta1[2];
+                                    $incapacidad = $consulta1[3];
                                 }
 
                                 // Consulta Galardón
@@ -127,6 +130,7 @@ if(isset($_SESSION["usuarioID"])){
                                 <td><?php echo $premio['galardon'] ?></td>
                                 <td><?php echo $asistencia?></td>
                                 <td><?php echo $compa?></td>
+                                <td><?php echo $incapacidad?></td>
                                 <td>
                                     <?php 
                                         if($asistencia == "SI"){?>
