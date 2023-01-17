@@ -92,10 +92,11 @@ h5{
 }
 
 
+
 .imagen {
     max-width: 100%;
-
 }
+
 
 @media (min-width: 1920px) {
     .imagen {

@@ -32,7 +32,7 @@ if(!isset($_SESSION["usuarioID"])){
         <!-- Header -->
         <header>
             <div class="no-margin">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/banner top.jpg" class="imagen" />
                 </a>
             </div>
@@ -53,26 +53,28 @@ if(!isset($_SESSION["usuarioID"])){
 
         <!--Slider-->
         <div class="container">
+        <hr>
             <div class="slider">
                 <ul>
                     <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg"
-                            alt="">
+                        <img src="/img/gal1.jpg"
+                            alt="Galardonados 1">
                     </li>
                     <li>
-                        <img src="http://youghaltennisclub.ie/wp-content/uploads/2014/06/Tennis-Wallpaper-High-Definition-700x300.jpg"
-                            alt="">
+                        <img src="/img/gal2.jpg"
+                            alt="Galardonados 2">
                     </li>
                     <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/08/android-wallpapers-700x300.jpg"
-                            alt="">
+                        <img src="/img/gal3.jpg"
+                            alt="Galardonados 3">
                     </li>
                     <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg"
-                            alt="">
+                        <img src="/img/gal4.jpg"
+                            alt="Galardonados 4">
                     </li>
                 </ul>
             </div>
+            <hr>
         </div>
 
         <!-- Convocatoria -->
