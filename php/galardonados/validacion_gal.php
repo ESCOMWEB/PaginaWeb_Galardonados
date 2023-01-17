@@ -58,7 +58,7 @@ if(isset($_SESSION["usuarioID"])){
                             <button class="btn btn-primary btn-lg active" data-target="#foo" type="submit" >Validar</button>
                         </div>
                         <div>
-                            <a href="../sinpagina/comprobante.php">Comprobante PDF</a>
+                            <a href="./comprobante.php">Comprobante PDF</a>
                         </div>
                     </form>
                     <hr>
