@@ -15,36 +15,41 @@ if(isset($_SESSION["usuarioID"])){
                     <h1>Favor de registrar su asistencia</h1>
                     <hr>
                     <form role="form" method="POST" action="validarExito.php?id=<?php echo $id;?>">
-                        <h3>¿Asistira con acompañantes al evento?*</h3>
+                        <h5>¿Asistira con acompañantes al evento?*</h5>
                         <div class="checkbox">
-                            <label>
-                                <input type="radio" name="radio-01" value="opcion-01" checked="checked"> No
-                            </label>
                             <label>
                                 <input type="radio" name="radio-01" value="opcion-02" checked="checked"> Si
                             </label>
+                            <label>
+                                <input type="radio" name="radio-01" value="opcion-01" > No
+                            </label>
+                            
                         </div> 
                         
-                        <h3>En caso de haber contestado "Si", seleccione el tipo de servicio que puda necesitar:</h3>
+                        <h5>En caso de haber contestado "Si", seleccione el tipo de servicio que pueda necesitar:</h5>
                         <div class="checkbox">
                             <label>
-                              <input type="checkbox" id="compa" value="opcion-01"> Silla de ruedas
+                              <input type="radio" name ="incapacidad" id="compa" value="Silla Ruedas"> Silla de ruedas
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox" id="compa"  value="opcion-02"> Bastón
+                                <input type="radio" name ="incapacidad" id="compa"  value="Bastón"> Bastón
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox" id="compa" value="opcion-03"> Andadera
+                                <input type="radio" name ="incapacidad" id="compa" value="Andadera"> Andadera
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox" id="compa"  value="opcion-04"> Ceguera
+                                <input type="radio" name ="incapacidad" id="compa"  value="Ceguera"> Ceguera
                             </label>
                             <br>
                             <label>
-                                <input type="checkbox" id="compa"  value="opcion-05"> Otro
+                                <input type="radio" name ="incapacidad" id="compa"  value="Otro"> Otro
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="/" checked> Ninguna
                             </label>
                         </div>
 
@@ -53,7 +58,7 @@ if(isset($_SESSION["usuarioID"])){
                             <input class="form-control" id="compa" name = "compa" placeholder="Ingresa Acompañante (Dejar vacio Si no se llevara)" type="text">
                         </div>
 
-                        <h3>Verificar asistencia al evento: </h3>
+                        <h5>Verificar asistencia al evento: </h5>
                         <div>
                             <button class="btn btn-primary btn-lg active" data-target="#foo" type="submit" >Validar</button>
                         </div>

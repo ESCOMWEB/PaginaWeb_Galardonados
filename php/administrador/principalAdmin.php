@@ -32,7 +32,7 @@ if(isset($_SESSION["usuarioID"])){
         <!-- Header -->
         <header>
             <div class="no-margin">
-                <a href="/index.html">
+                <a href="/php/administrador/principalAdmin.php">
                     <img src="/img/banner top.jpg" class="imagen" />
                 </a>
             </div>
@@ -43,11 +43,8 @@ if(isset($_SESSION["usuarioID"])){
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
-                <ul class="jm-collapse">
-                    <li><a href="./../../index.php">Inicio</a></li>
-                    <li><a href="./../../index.php">Regristro</a></li>
-                    <li><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
-                </ul>
+                    <li class="jm-collapse"><a href="/php/administrador/principalAdmin.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
             </nav>
         </div>
 
@@ -111,7 +108,7 @@ if(isset($_SESSION["usuarioID"])){
         <footer>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:

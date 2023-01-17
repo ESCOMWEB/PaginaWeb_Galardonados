@@ -64,7 +64,7 @@ if(isset($_SESSION["usuarioID"])){
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
-                    <li class="jm-collapse"><a href="./../../index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="/php/director/principalDirector.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
             </nav>
         </div>
@@ -91,7 +91,7 @@ if(isset($_SESSION["usuarioID"])){
         <br><br>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:
