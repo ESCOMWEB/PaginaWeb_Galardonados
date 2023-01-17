@@ -1,110 +1,66 @@
-<?php 
+<?php
+require('fpdf/fpdf.php');
 
-session_start();
-    $idGalardonado = $_SESSION["usuarioID"];
-    
-    include("../sinPagina/configDB.php");
+class PDF extends FPDF
+{
+// Cabecera de página
+function Header()
+{
+    // Arial bold 15
+    $this->SetFont('Arial','B',22);
+    // Movernos a la derecha
+    $this->Cell(45);
+    // Título
+    $this->Cell(100,10,utf8_decode('Reporte de Validación'),0,0,'C');
+    // Salto de línea
+    $this->Ln(20);
 
-    // Consulta Nombre del galardonado
-    $sql = "SELECT * FROM galardonado WHERE idGalardonado = $idGalardonado";
-    $res = mysqli_query($conexion, $sql);
-    $nombre = mysqli_fetch_array($res);
+    $this->Cell(55, 10, 'idGalardonado',1,0,'C',0);
+    $this->Cell(50, 10, 'Nombre',1,0,'C',0);
+    $this->Cell(40, 10, 'ApellidoP',1,0,'C',0);
+    $this->Cell(40, 10, 'ApellidoS',1,1,'C',0);
+}
 
-if(isset($_SESSION["usuarioID"])){
+// Pie de página
+function Footer()
+{
+    // Posición: a 1,5 cm del final
+    $this->SetY(-15);
+    // Arial italic 8
+    $this->SetFont('Arial','I',8);
+    // Número de página
+    $this->Cell(0,10,'Pagina '.$this->PageNo().'/{nb}',0,0,'C');
+}
+}
 
-ob_start();
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/boot">
-
-</head>
-<body>
-<?php include("../sinPagina/configDB.php"); 
-
-$sql = "SELECT * FROM galardonado WHERE idGalardonado = $idGalardonado";
+require("../sinPagina/configDB.php");
+/*
+$sql = "SELECT * FROM galardonado";
 $res = mysqli_query($conexion, $sql);
 $nombre = mysqli_fetch_array($res);
+*/
+$consulta = "SELECT * FROM galardonado";
+$resultado = $conexion->query($consulta);
 
+$pdf = new PDF();
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial','',16);
 
-?>
-
-<!-- TABLA EJEMPLO PDF -->
-                        <h1>COMPROBANTE</h1>
-                        <hr>
-                        <table class="table table-striped">
-                            <tr>
-                                <td><b>Clave</b></td>
-                                <td><b>Nombre</b></td>
-                                <td><b>Evento</b></td>
-                                <td><b>Galardón</b></td>
-                            </tr>
-                            <tr id = "fila">
-                                <td><?php echo $galardon['idGalardonado'] ?></td>
-                                <td><?php echo $nombre[1] , " " , $nombre[2] , " " , $nombre[3]?></td>
-                                <td>Entrega de distinciones al Merito Politécnico</td>
-                                <td><?php
-                                while($galardon = mysqli_fetch_array($res2)){
-                                    //Consulta galardones
-                                    $sql = "SELECT * FROM galardon_has_galardonado WHERE galardonado_idGalardonado = '$galardon[0]'";
-                                    $res = mysqli_query($conexion, $sql);
-                                    $consulta2 = mysqli_fetch_array($res);
-
-                                    //Tipo de galardon
-                                    $sql = "SELECT * FROM galardon WHERE idGalardon = '$consulta2[1]'";
-                                    $res = mysqli_query($conexion, $sql);
-                                    $premio = mysqli_fetch_array($res);
-                                ?>
-                                <td><?php echo $premio['galardon'] ?></td>      
-                            </tr>
-                            <?php
-                                }
-                            ?>
-                            <img src="../../img/banner top.jpg" class="imagen" />
-                        </table>
-
-
-
-</body>
-</html>
-
-<?php 
-$html=ob_get_clean(); //VARIABLE PARA EL ARCHIVO HTML
-
-//echo $hmtl; //comprobar si esta en memoria
-
-//Crear el objeto de conversión HTML-PDF
-require_once '../libreria/dompdf/autoload.inc.php';
-use Dompdf\Dompdf;
-$dompdf = new Dompdf();
-
-$options = $dompdf->getOptions();
-$options->set(array('isRemoteEnabled' => true));
-$dompdf->setOptions($options);
-
-$dompdf->loadHtml($html);
-
-$dompdf->setPaper('letter');
-
-$dompdf->render();
-
-$dompdf->stream("archivo_.pdf",array("Attachment" => false));
-
-?>
-                            
-<?php include("pie.php");
-}
-else{
-    header("location:./../");
+while($row = $resultado->fetch_assoc()){
+    $pdf->Cell(55, 10, utf8_decode($row['idGalardonado']),1,0,'C',0);
+    $pdf->Cell(50, 10, utf8_decode($row['Nombre']),1,0,'C',0);
+    $pdf->Cell(40, 10, utf8_decode($row['ApellidoP']),1,0,'C',0);
+    $pdf->Cell(40, 10, utf8_decode($row['ApellidoS']),1,1,'C',0);
 }
 
+
+//while($row = $nombre->fetch_assoc()){
+    //$pdf->Cell(90,10,$row['Nombre'],1,0,'C',0);
+//}
+
+
+
+//$pdf->Cell(40,10,utf8_decode('¡Hola, Mundo!'));
+$pdf->Output();
 ?>
