@@ -13,11 +13,11 @@ include("../sinPagina/configDB.php");
     $comprobando = mysqli_num_rows($res);
 
     if($comprobando != 0){
-        $sql = "UPDATE asistencia SET Confirmacion = 'NO', Acompañante = '/' WHERE idGalardonado = '$id'";
+        $sql = "UPDATE asistencia SET Confirmacion = 'NO', Acompañante = '/', Incapacidad = '/' WHERE idGalardonado = '$id'";
         mysqli_query($conexion, $sql); 
     }
     else{
-        $sql = "INSERT INTO asistencia (idGalardonado, Confirmacion, Acompañante) values ('$id', 'NO', '/')";
+        $sql = "INSERT INTO asistencia (idGalardonado, Confirmacion, Acompañante, Incapacidad) values ('$id', 'NO', '/', '/')";
         mysqli_query($conexion, $sql);  
     }
 

@@ -35,6 +35,7 @@ if(isset($_SESSION["usuarioID"])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IPN - Distinciones al Mérito Politécnico</title>
     <link href="/img/Logo_Instituto_Politécnico_Nacional.png" rel="shortcut icon">
+    
 
     <!-- CSS Framework Gobierno-->
     <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
@@ -44,6 +45,7 @@ if(isset($_SESSION["usuarioID"])){
     <!-- CSS y JS Propio-->
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/barraNav.js"></script>
+    <script src="/js/alertaDirector.js"></script>
 
 </head>
 

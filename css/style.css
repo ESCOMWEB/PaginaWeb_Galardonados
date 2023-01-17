@@ -82,12 +82,16 @@ h3 {
     font-size: 2rem;
     text-align: center;
 }
-
 h4 {
     font-size: 1.9rem;
     text-align: left;
     margin-left: 20rem;
 }
+h5{
+    font-size: 2rem;
+    text-align: left; 
+}
+
 
 .imagen {
     max-width: 100%;

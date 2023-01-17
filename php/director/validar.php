@@ -65,6 +65,34 @@ if(isset($_SESSION["usuarioID"])){
             </div>
 
             <form role="form" method="POST" action="validarExito.php?id=<?php echo $id;?>">
+                <h5>Seleccione el tipo de servicio que pueda necesitar:</h5>
+                        <div class="checkbox">
+                            <label>
+                              <input type="radio" name ="incapacidad" id="compa" value="Silla Ruedas"> Silla de ruedas
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="Bastón"> Bastón
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa" value="Andadera"> Andadera
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="Ceguera"> Ceguera
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="Otro"> Otro
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="/" checked> Ninguna
+                            </label>
+                        </div>
+
+            
                 <div class="form-group">
                     <label class="control-label" for="email-01">Acompañante</label>
                     <input class="form-control" id="compa" name = "compa" placeholder="Ingresa Acompañante (Dejar vacio Si no se llevara)" type="text">
