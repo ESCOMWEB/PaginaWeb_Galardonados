@@ -40,7 +40,8 @@ else {
         }
     } 
     else {
-        $sqlCon3 = "SELECT contraseña from cuentaadmin WHERE usuario='$usuario'";
+        $sqlCon3 = "SELECT cuentaadmin.contraseña, admin.id_admin from cuentaadmin
+         inner join admin on admin.id_admin=cuentaadmin.idAdmin where cuentaadmin.usuario='".$usuario."'";
         $sqlRes3 = mysqli_query($conexion, $sqlCon3);
         $sqlInf3 = mysqli_fetch_row($sqlRes3);
 
@@ -48,6 +49,7 @@ else {
             $resp["cod"] = 1;
             $_SESSION["tipoUsuario"] = 1;
             $_SESSION["usuarioID"] = $usuario;
+            $_SESSION["idAdmin"] = $sqlInf3[1];
 
         }
         else {

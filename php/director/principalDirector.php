@@ -67,6 +67,8 @@ if(isset($_SESSION["usuarioID"])){
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+                    <li class="jm-collapse"><a href="./../../index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="/php/director/grafica.php">Asistencia</a></li>
                     <li class="jm-collapse"><a href="/php/director/principalDirector.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
             </nav>
