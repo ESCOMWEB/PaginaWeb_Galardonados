@@ -22,6 +22,9 @@ if(isset($_SESSION["usuarioID"])){
                 if($asistencia != 0){
                     echo "<h1>YA SE HA VALIDADO LA ASISTENCIA</h1>
                         <p> Si necesita cambiar modificar algun dato, acude con el director de tu instituo.</p>";
+                    echo '<div class="contenedor-btn">
+                        <a href="./comprobante.php" class="boton" target=”_blank”>Comprobante PDF</a>
+                        </div>';
                 } else{
                 ?>
                     <h1>Favor de registrar su asistencia</h1>

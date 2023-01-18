@@ -43,7 +43,7 @@ function Footer()
 require("../sinPagina/configDB.php");
 
 session_start();
-    $idGalardonado = $_SESSION["usuarioID"];
+    $idGalardonado = $_GET['id'];
     
     //include("../sinPagina/configDB.php");
 

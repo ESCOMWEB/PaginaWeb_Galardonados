@@ -42,7 +42,7 @@ if(isset($_SESSION["usuarioID"])){
                     <?php echo "<h2> ACOMPAÑANTE: $compa</h2>" ?>
                     <hr>
                     <div class="contenedor-btn">
-                        <a href="./comprobante.php" class="boton">Comprobante PDF</a>
+                        <a href="./comprobante.php" class="boton" target=”_blank”>Comprobante PDF</a>
                     </div>
                     <hr>
                     <div class="contenedor-btn">

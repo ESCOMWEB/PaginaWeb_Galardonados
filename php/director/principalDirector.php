@@ -141,6 +141,9 @@ if(isset($_SESSION["usuarioID"])){
                                             <a href="noValidar.php?id=<?php echo $galardon['idGalardonado']; ?>">
                                                 <span class="a-color2 glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>
                                             </a>
+                                            <a target="_blank" href="comprobanteDirec.php?id=<?php echo $galardon['idGalardonado']; ?>">
+                                                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> 
+                                            </a> 
                                         <?php } 
                                         else if($asistencia == "NO"){ ?>
                                             <a href="validar.php?id=<?php echo $galardon['idGalardonado']; ?>">
@@ -157,7 +160,8 @@ if(isset($_SESSION["usuarioID"])){
                                             </a>
                                         <?php } ?>
 
-                                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>    
+                                        
+                                      
                                 </td>          
                             </tr>
                         <?php 
