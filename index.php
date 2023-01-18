@@ -43,10 +43,10 @@ if(!isset($_SESSION["usuarioID"])){
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
-                    <li class="jm-collapse"><a href="../index.php">Inicio</a></li>
-                    <li class="jm-collapse"><a href="/html/inicio_sesion.html">Iniciar Sesión</a></li>
-                    <li class="jm-collapse"><a href="/html/registro.html">Registrarse</a></li>
-                    <li class="jm-collapse"><a download href="../pdf/convocatoria.pdf">Convocatoria <span class="glyphicon glyphicon-download-alt"
+                    <li class="jm-collapse"><a href="index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="html/inicio_sesion.html">Iniciar Sesión</a></li>
+                    <li class="jm-collapse"><a href="html/registro.html">Registrarse</a></li>
+                    <li class="jm-collapse"><a download href="pdf/convocatoria.pdf">Convocatoria <span class="glyphicon glyphicon-download-alt"
                         aria-hidden="true"></span></a></li>
             </nav>
         </div>
@@ -57,19 +57,19 @@ if(!isset($_SESSION["usuarioID"])){
             <div class="slider">
                 <ul>
                     <li>
-                        <img src="/img/gal1.jpg"
+                        <img src="img/gal1.jpg"
                             alt="Galardonados 1">
                     </li>
                     <li>
-                        <img src="/img/gal2.jpg"
+                        <img src="img/gal2.jpg"
                             alt="Galardonados 2">
                     </li>
                     <li>
-                        <img src="/img/gal3.jpg"
+                        <img src="img/gal3.jpg"
                             alt="Galardonados 3">
                     </li>
                     <li>
-                        <img src="/img/gal4.jpg"
+                        <img src="img/gal4.jpg"
                             alt="Galardonados 4">
                     </li>
                 </ul>
@@ -174,7 +174,7 @@ if(!isset($_SESSION["usuarioID"])){
                         dirección electrónica; su uso para otros fines, requiere autorización previa y por escrito de la
                         Dirección General del Instituto.
                     </p>
-                    <img src="/img/educacion2.png" class="imagen">
+                    <img src="img/educacion2.png" class="imagen">
                 </div>
             </div>
         </footer>

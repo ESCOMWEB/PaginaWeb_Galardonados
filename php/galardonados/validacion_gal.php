@@ -29,27 +29,27 @@ if(isset($_SESSION["usuarioID"])){
                         <h5>En caso de haber contestado "Si", seleccione el tipo de servicio que pueda necesitar:</h5>
                         <div class="checkbox">
                             <label>
-                              <input type="radio" name ="incapacidad" id="compa" value="Silla Ruedas"> Silla de ruedas
+                              <input type="radio" name ="incap" id="incap" value="Silla Ruedas"> Silla de ruedas
                             </label>
                             <br>
                             <label>
-                                <input type="radio" name ="incapacidad" id="compa"  value="Bastón"> Bastón
+                                <input type="radio" name ="incap" id="incap"  value="Bastón"> Bastón
                             </label>
                             <br>
                             <label>
-                                <input type="radio" name ="incapacidad" id="compa" value="Andadera"> Andadera
+                                <input type="radio" name ="incap" id="incap" value="Andadera"> Andadera
                             </label>
                             <br>
                             <label>
-                                <input type="radio" name ="incapacidad" id="compa"  value="Ceguera"> Ceguera
+                                <input type="radio" name ="incap" id="incap"  value="Ceguera"> Ceguera
                             </label>
                             <br>
                             <label>
-                                <input type="radio" name ="incapacidad" id="compa"  value="Otro"> Otro
+                                <input type="radio" name ="incap" id="incap"  value="Otro"> Otro
                             </label>
                             <br>
                             <label>
-                                <input type="radio" name ="incapacidad" id="compa"  value="/" checked> Ninguna
+                                <input type="radio" name ="incap" id="incap"  value="/" checked> Ninguna
                             </label>
                         </div>
 
@@ -61,9 +61,6 @@ if(isset($_SESSION["usuarioID"])){
                         <h5>Verificar asistencia al evento: </h5>
                         <div>
                             <button class="btn btn-primary btn-lg active" data-target="#foo" type="submit" >Validar</button>
-                        </div>
-                        <div>
-                            <a href="./comprobante.php">Comprobante PDF</a>
                         </div>
                     </form>
                     <hr>

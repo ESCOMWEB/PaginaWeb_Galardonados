@@ -14,7 +14,7 @@ $(document).ready(()=>{
         .onSuccess((e)=>{
             e.preventDefault();
             $.ajax({
-                url:"/php/sinPagina/inicioSesion.php",
+                url:"../php/sinPagina/inicioSesion.php",
                 method:"POST",
                 data:$("#inicioSesion").serialize(),
                 cache:false,
