@@ -180,7 +180,13 @@ if(!isset($_SESSION["usuarioID"])){
 
 <?php
 }
-else if($_SESSION["tipoUsuario"]==3){
+else if($_SESSION["tipoUsuario"]==1){
     header("location:/php/administrador/principalAdmin.php");
+}
+else if($_SESSION["tipoUsuario"]==2){
+    header("location:/php/director/principalDirector.php");
+}
+else{
+    echo '<p>' . $_SESSION["tipoUsuario"] . '</p>';
 }
 ?>

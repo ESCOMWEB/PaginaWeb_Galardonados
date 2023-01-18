@@ -12,17 +12,22 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    
     /* 1 rem = 10px */
+}
+
+
+@media (max-width: 1080px){
+    
+    .tabla{
+        display:block;
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 426px) {
     html {
         background-color: var(--blanco);
-    }
-    
-    .table-striped{
-        display:block;
-        overflow-x: auto;
     }
     .menu {
         display: flex;
@@ -86,7 +91,6 @@ h3 {
 h4 {
     font-size: 1.9rem;
     text-align: left;
-    margin-left: 20rem;
 }
 
 .imagen {
