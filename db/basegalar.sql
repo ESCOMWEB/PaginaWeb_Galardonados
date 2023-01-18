@@ -214,8 +214,8 @@ CREATE TABLE `galardon_has_galardonado` (
   PRIMARY KEY (`galardonado_idGalardon`),
   KEY `fk_galardon_has_galardonado_galardonado1_idx` (`galardonado_idGalardonado`,`galardonado_idGalardon`),
   KEY `fk_galardon_has_galardonado_galardon1_idx` (`galardon_idGalardon`),
-  CONSTRAINT `fk_galardon_has_galardonado_galardon1` FOREIGN KEY (`galardon_idGalardon`) REFERENCES `galardon` (`idGalardon`),
-  CONSTRAINT `fk_galardon_has_galardonado_galardonado1` FOREIGN KEY (`galardonado_idGalardonado`) REFERENCES `galardonado` (`idGalardonado`)
+  CONSTRAINT `fk_galardon_has_galardonado_galardon1` FOREIGN KEY (`galardon_idGalardon`) REFERENCES `galardon` (`idGalardon`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_galardon_has_galardonado_galardonado1` FOREIGN KEY (`galardonado_idGalardonado`) REFERENCES `galardonado` (`idGalardonado`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -298,4 +298,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-16 21:28:35
+-- Dump completed on 2023-01-17 20:55:48
