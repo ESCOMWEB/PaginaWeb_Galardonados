@@ -5,6 +5,8 @@ session_start();
     
     include("../sinPagina/configDB.php");
 
+
+
     // Consulta Nombre del galardonado
     $sql = "SELECT * FROM galardonado WHERE idGalardonado = '$idGalardonado'";
     $res = mysqli_query($conexion, $sql);

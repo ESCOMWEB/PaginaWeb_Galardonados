@@ -4,6 +4,10 @@ include("../sinPagina/configDB.php");
 
     $id = $_GET['id'];
     $compa = $_POST['compa'];
+    if (isset($_POST['incapacidad'])){
+        $incapacidad = $_POST['incapacidad']; 
+    }
+
     if($compa == ""){
         $compa = "/";
     }
@@ -17,11 +21,11 @@ include("../sinPagina/configDB.php");
     $comprobando = mysqli_num_rows($res);
 
     if($comprobando != 0){
-        $sql = "UPDATE asistencia SET Confirmacion = 'SI', Acompañante = '$compa' WHERE idGalardonado = '$id'";
+        $sql = "UPDATE asistencia SET Confirmacion = 'SI', Acompañante = '$compa', Incapacidad = '$incapacidad' WHERE idGalardonado = '$id'";
         mysqli_query($conexion, $sql); 
     }
     else{
-        $sql = "INSERT INTO asistencia (idGalardonado, Confirmacion, Acompañante) values ('$id', 'SI', '$compa')";
+        $sql = "INSERT INTO asistencia (idGalardonado, Confirmacion, Acompañante, Incapacidad) values ('$id', 'SI', '$compa', '$incapacidad')";
         mysqli_query($conexion, $sql);  
     }
 
@@ -68,7 +72,7 @@ if(isset($_SESSION["usuarioID"])){
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
-                    <li class="jm-collapse"><a href="./../../index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="/php/director/principalDirector.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
             </nav>
         </div>
@@ -80,6 +84,7 @@ if(isset($_SESSION["usuarioID"])){
                     <?php echo "<h2> CLAVE: $galardonado[0]</h2>" ?>
                     <?php echo "<h2> NOMBRE: $galardonado[1] $galardonado[2] $galardonado[3]</h2>" ?>
                     <?php echo "<h2> ACOMPAÑANTE: $compa</h2>" ?>
+                    <?php echo "<h2> INCAPACIDAD: $incapacidad</h2>" ?>
 
                     <div class="contenedor-btn">
                         <a href="principalDirector.php" class="boton">Regresar</a>
@@ -96,7 +101,7 @@ if(isset($_SESSION["usuarioID"])){
         <br><br>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:

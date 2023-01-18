@@ -35,6 +35,7 @@ if(isset($_SESSION["usuarioID"])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IPN - Distinciones al Mérito Politécnico</title>
     <link href="/img/Logo_Instituto_Politécnico_Nacional.png" rel="shortcut icon">
+    
 
     <!-- CSS Framework Gobierno-->
     <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
@@ -44,6 +45,7 @@ if(isset($_SESSION["usuarioID"])){
     <!-- CSS y JS Propio-->
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/barraNav.js"></script>
+    <script src="/js/alertaDirector.js"></script>
 
 </head>
 
@@ -67,6 +69,7 @@ if(isset($_SESSION["usuarioID"])){
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
                     <li class="jm-collapse"><a href="./../../index.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/director/grafica.php">Asistencia</a></li>
+                    <li class="jm-collapse"><a href="/php/director/principalDirector.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
             </nav>
         </div>
@@ -75,8 +78,10 @@ if(isset($_SESSION["usuarioID"])){
             
             <div class="contenedorBus">
                 <div class="container padding-2">
-                <?php echo "<h2> Bienvenid@: $nombre[1] $nombre[2] $nombre[3]</h2>" ?>
-            <?php echo "<h3> UNIDAD ACADEMICA: $unidad[0]</h3>" ?>
+                <hr>
+                    <?php echo "<h2> Bienvenid@: $nombre[1] $nombre[2] $nombre[3]</h2>" ?>
+                    <?php echo "<h3> UNIDAD ACADEMICA: $unidad[0]</h3>" ?>
+                <hr>
                     
                       <div class="tabla">
                       <table class="table table-striped">
@@ -87,6 +92,7 @@ if(isset($_SESSION["usuarioID"])){
                             <td><b>Galardón</b></td>
                             <td><b>Asistencia</b></td>
                             <td><b>Acompañante</b></td>
+                            <td><b>Incapacidad</b></td>
                             <td><b>Validar</b></td>
                           </tr>
                           
@@ -104,10 +110,12 @@ if(isset($_SESSION["usuarioID"])){
                                 if (is_null($consulta1)) {
                                     $asistencia = "SIN CONFIRMAR";
                                     $compa = "SIN CONFIRMAR";
+                                    $incapacidad = "SIN CONFIRMAR";
                                 }
                                 else{
                                     $asistencia = $consulta1[1];
                                     $compa = $consulta1[2];
+                                    $incapacidad = $consulta1[3];
                                 }
 
                                 // Consulta Galardón
@@ -128,6 +136,7 @@ if(isset($_SESSION["usuarioID"])){
                                 <td><?php echo $premio['galardon'] ?></td>
                                 <td><?php echo $asistencia?></td>
                                 <td><?php echo $compa?></td>
+                                <td><?php echo $incapacidad?></td>
                                 <td>
                                     <?php 
                                         if($asistencia == "SI"){?>
@@ -166,7 +175,7 @@ if(isset($_SESSION["usuarioID"])){
         <footer>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:

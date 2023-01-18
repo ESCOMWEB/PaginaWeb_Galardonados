@@ -56,7 +56,7 @@ if(isset($_SESSION["usuarioID"])){
                             </tr>
                             </table>
 
-                            <h4>Observaciones:</h4>
+                            <h5>Observaciones:</h5>
                             <p><?php echo $galardon['Observaciones'];?></p>
                         </div>
 <?php include("pie.php");

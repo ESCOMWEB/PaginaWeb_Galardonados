@@ -31,29 +31,28 @@ if (isset($_SESSION["usuarioID"])) {
     </head>
 
     <!-- Contenido -->
+<body>
+    <main class="page">
+        <!-- Header -->
+        <header>
+            <div class="no-margin">
+                <a href="/php/administrador/principalAdmin.php">
+                    <img src="/img/banner top.jpg" class="imagen" />
+                </a>
+            </div>
 
-    <body>
-        <main class="page">
-            <!-- Header -->
-            <header>
-                <div class="no-margin">
-                    <a href="/index.html">
-                        <img src="/img/banner top.jpg" class="imagen" />
-                    </a>
-                </div>
             </header>
 
-            <!-- Navegador -->
-            <div class="nav-bg">
-                <nav class="navegacion-principal contenedor jmenu">
-                    <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
-                    <input type="checkbox" id="menu-btn" class="jm-menu-btn">
-
-                    <li class="jm-collapse"><a href="./../../index.php">Inicio</a></li>
-                    <li class="jm-collapse"><a href="./registroGalardonado.php">Registro</a></li>
+          
+ <!-- Navegador Responsivo -->
+        <div class="nav-bg">
+            <nav class="navegacion-principal contenedor jmenu">
+                <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+                <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+                    <li class="jm-collapse"><a href="/php/administrador/principalAdmin.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
-                </nav>
-            </div>
+            </nav>
+        </div>
 
             <section>
                 <div class="container padding-2">

@@ -87,16 +87,21 @@ h3 {
     font-size: 2rem;
     text-align: center;
 }
-
 h4 {
     font-size: 1.9rem;
-    text-align: left;
+    text-align: center;
 }
+h5{
+    font-size: 2rem;
+    text-align: left; 
+}
+
+
 
 .imagen {
     max-width: 100%;
-
 }
+
 
 @media (min-width: 1920px) {
     .imagen {

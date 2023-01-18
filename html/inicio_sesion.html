@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IPN - Distinciones al Mérito Politécnico</title>
-    <link href="/img/Logo_Instituto_Politécnico_Nacional.png" rel="shortcut icon">
+    <link href="../img/Logo_Instituto_Politécnico_Nacional.png" rel="shortcut icon">
 
     <!-- CSS Framework Gobierno-->
     <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
@@ -14,13 +14,13 @@
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
 
     <!-- CSS y JS Propio-->
-    <link href="/css/style.css" rel="stylesheet">
-    <script src="/js/barraNav.js"></script>
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/barraNav.js"></script>
 
     <!-- JS para validar los datos -->
-    <script src="/js/jquery-3.6.1.min.js"></script>
-    <script src="/js/plugins/justValidate.js"></script>
-    <script src="/js/inicioSesion.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/plugins/justValidate.js"></script>
+    <script src="../js/inicioSesion.js"></script>
 
 </head>
 
@@ -31,20 +31,22 @@
         <!-- Header -->
         <header>
             <div class="no-margin">
-                <a href="/index.html">
-                    <img src="/img/banner top.jpg" class="imagen" />
+                <a href="../index.php">
+                    <img src="../img/banner top.jpg" class="imagen" />
                 </a>
             </div>
         </header>
 
-        <!-- Navegador -->
+        <!-- Navegador Responsivo -->
         <div class="nav-bg">
-            <nav class="navegacion-principal contenedor">
-                <a href="/index.php">Inicio</a>
-                <a href="inicio_sesion.html">Iniciar Sesión</a>
-                <a href="registro.html">Registrarse</a>
-                <a download href="/pdf/convocatoria.pdf">Convocatoria <span class="glyphicon glyphicon-download-alt"
-                        aria-hidden="true"></span></a>
+            <nav class="navegacion-principal contenedor jmenu">
+                <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+                <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+                    <li class="jm-collapse"><a href="../index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="inicio_sesion.html">Iniciar Sesión</a></li>
+                    <li class="jm-collapse"><a href="registro.html">Registrarse</a></li>
+                    <li class="jm-collapse"><a download href="../pdf/convocatoria.pdf">Convocatoria <span class="glyphicon glyphicon-download-alt"
+                        aria-hidden="true"></span></a></li>
             </nav>
         </div>
 
@@ -81,7 +83,7 @@
         <footer>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                    <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:
@@ -96,7 +98,7 @@
                         dirección electrónica; su uso para otros fines, requiere autorización previa y por escrito de la
                         Dirección General del Instituto.
                     </p>
-                    <img src="/img/educacion2.png" class="imagen">
+                    <img src="../img/educacion2.png" class="imagen">
                 </div>
             </div>
         </footer>

@@ -32,44 +32,49 @@ if(!isset($_SESSION["usuarioID"])){
         <!-- Header -->
         <header>
             <div class="no-margin">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/banner top.jpg" class="imagen" />
                 </a>
             </div>
         </header>
 
-        <!-- Navegador -->
+        <!-- Navegador Responsivo -->
         <div class="nav-bg">
-            <nav class="navegacion-principal contenedor">
-                <a href="index.php">Inicio</a>
-                <a href="html/inicio_sesion.html">Iniciar Sesión</a>
-                <a href="html/registro.html">Registrarse</a>
-                <a download href="/pdf/convocatoria.pdf">Convocatoria  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
+            <nav class="navegacion-principal contenedor jmenu">
+                <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
+                <input type="checkbox" id="menu-btn" class="jm-menu-btn">
+                    <li class="jm-collapse"><a href="index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="html/inicio_sesion.html">Iniciar Sesión</a></li>
+                    <li class="jm-collapse"><a href="html/registro.html">Registrarse</a></li>
+                    <li class="jm-collapse"><a download href="pdf/convocatoria.pdf">Convocatoria <span class="glyphicon glyphicon-download-alt"
+                        aria-hidden="true"></span></a></li>
             </nav>
         </div>
 
         <!--Slider-->
         <div class="container">
+        <hr>
             <div class="slider">
                 <ul>
                     <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg"
-                            alt="">
+                        <img src="img/gal1.jpg"
+                            alt="Galardonados 1">
                     </li>
                     <li>
-                        <img src="http://youghaltennisclub.ie/wp-content/uploads/2014/06/Tennis-Wallpaper-High-Definition-700x300.jpg"
-                            alt="">
+                        <img src="img/gal2.jpg"
+                            alt="Galardonados 2">
                     </li>
                     <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/08/android-wallpapers-700x300.jpg"
-                            alt="">
+                        <img src="img/gal3.jpg"
+                            alt="Galardonados 3">
                     </li>
                     <li>
-                        <img src="http://welltechnically.com/wp-content/uploads/2013/09/android-widescreen-wallpaper-14165-hd-wallpapers-700x300.jpg"
-                            alt="">
+                        <img src="img/gal4.jpg"
+                            alt="Galardonados 4">
                     </li>
                 </ul>
             </div>
+            <hr>
         </div>
 
         <!-- Convocatoria -->
@@ -154,7 +159,7 @@ if(!isset($_SESSION["usuarioID"])){
         <footer>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                    <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:
@@ -169,7 +174,7 @@ if(!isset($_SESSION["usuarioID"])){
                         dirección electrónica; su uso para otros fines, requiere autorización previa y por escrito de la
                         Dirección General del Instituto.
                     </p>
-                    <img src="/img/educacion2.png" class="imagen">
+                    <img src="img/educacion2.png" class="imagen">
                 </div>
             </div>
         </footer>

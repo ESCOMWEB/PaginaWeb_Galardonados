@@ -49,7 +49,7 @@ if(isset($_SESSION["usuarioID"])){
             <nav class="navegacion-principal contenedor jmenu">
                 <label for="menu-btn" class="jm-menu-btn jm-icon-menu"></label>
                 <input type="checkbox" id="menu-btn" class="jm-menu-btn">
-                    <li class="jm-collapse"><a href="./../../index.php">Inicio</a></li>
+                    <li class="jm-collapse"><a href="/php/director/principalDirector.php">Inicio</a></li>
                     <li class="jm-collapse"><a href="/php/sinPagina/cerrarSesion.php">Cerrar sesión</a></li>
             </nav>
         </div>
@@ -65,6 +65,34 @@ if(isset($_SESSION["usuarioID"])){
             </div>
 
             <form role="form" method="POST" action="validarExito.php?id=<?php echo $id;?>">
+                <h5>Seleccione el tipo de servicio que pueda necesitar:</h5>
+                        <div class="checkbox">
+                            <label>
+                              <input type="radio" name ="incapacidad" id="compa" value="Silla Ruedas"> Silla de ruedas
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="Bastón"> Bastón
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa" value="Andadera"> Andadera
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="Ceguera"> Ceguera
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="Otro"> Otro
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name ="incapacidad" id="compa"  value="/" checked> Ninguna
+                            </label>
+                        </div>
+
+            
                 <div class="form-group">
                     <label class="control-label" for="email-01">Acompañante</label>
                     <input class="form-control" id="compa" name = "compa" placeholder="Ingresa Acompañante (Dejar vacio Si no se llevara)" type="text">
@@ -85,7 +113,7 @@ if(isset($_SESSION["usuarioID"])){
         <br><br>
             <div class="footer">
                 <div class="container">
-                    <h4>INSTITUTO POLITÉCNICO NACIONAL</h4>
+                <h2>INSTITUTO POLITÉCNICO NACIONAL</h2>
                     <p>
                         D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo
                         López Mateos, Zacatenco, Alcaldía Gustavo A. Madero, C.P. 07738, Ciudad de México. Conmutador:

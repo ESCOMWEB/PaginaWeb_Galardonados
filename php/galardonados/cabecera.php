@@ -25,7 +25,7 @@
         <!-- Header -->
         <header>
             <div class="no-margin">
-                <a href="../../index.html">
+                <a href="/php/galardonados/principalGal.php">
                     <img src="../../img/banner top.jpg" class="imagen" />
                 </a>
             </div>
