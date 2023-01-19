@@ -39,6 +39,7 @@ if (isset($_SESSION["usuarioID"])) {
         <!-- JS para validar los datos -->
         <script src="./../../js/jquery-3.6.1.min.js"></script>
         <script src="./../../js/plugins/justValidate.js"></script>
+        <script src="/js/modificacion.js"¨></script>
 
     </head>
 
@@ -157,7 +158,7 @@ if (isset($_SESSION["usuarioID"])) {
                                 </div>
                             </div>
                             <div class="Mensaje"></div>
-                            <button class="btn btn-primary pull-right"  type="submit">Enviar</button>
+                            <button class="btn btn-primary pull-right"  type="submit">Modificar</button>
                             
                         </div>
                     </form>

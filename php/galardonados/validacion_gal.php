@@ -21,7 +21,7 @@ if(isset($_SESSION["usuarioID"])){
                 $asistencia = mysqli_fetch_array($res);
                 if($asistencia != 0){
                     echo "<h1>YA SE HA VALIDADO LA ASISTENCIA</h1>
-                        <p> Si necesita cambiar modificar algun dato, acude con el director de tu instituo.</p>";
+                        <p> Si necesitas cambiar o modificar algun dato o asistencia, acude con el director de tu instituto.</p>";
                     echo '<div class="contenedor-btn">
                         <a href="./comprobante.php" class="boton" target=”_blank”>Comprobante PDF</a>
                         </div>';

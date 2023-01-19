@@ -145,8 +145,15 @@ if (isset($_SESSION["usuarioID"])) {
                                             } else {
                                                 echo '<td>Personal de apoyo</td>';
                                             }
-                                            echo '<td><a href="actualizacion.php?id='.$filas[0].'"> <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                            </a></td>';
+                                            echo '<td>
+                                                <a href="actualizacion.php?id='.$filas[0].'"> 
+                                                    <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                                </a>
+                                                <a href="eliminar.php?id='.$filas[0].'"> 
+                                                    <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                </a
+                                            </td>';
+                                            
                                             echo '</tr>';
                                         }
                                         ?>
@@ -180,8 +187,15 @@ if (isset($_SESSION["usuarioID"])) {
                                             echo '<td>' . $filas[0] . '</td>';
                                             echo '<td>' . $filas[1] . ' ' . $filas[2] . ' ' . $filas[3] . '</td>';
                                             echo '<td>' . $filas[4] . '</td>';
-                                            echo '<td><a href="actualizacion.php?id='.$filas[0].'"> <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                            </a></td>';
+                                            echo '<td>
+                                                <a href="actualizacion.php?id='.$filas[0].'"> <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                                </a>
+
+                                            <a href="eliminar.php?id='.$filas[0].'"> 
+                                                    <span tyoe= "Submit" class="a-color1 glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                </a
+                                            </td>';
+                                            
                                             echo '</tr>';
                                         }
                                         ?>
